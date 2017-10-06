@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1 class="text-center">Meet our 2017 attendees</h1>
+</div>
+<div class="container">
+  <div class="row text-center" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div *ngFor="let attendee of attendees" class="col-md-3 col-sm-12">
+      <img [src]="attendee.person.avatar_url ? attendee.person.avatar_url : 'assets/default_avatar.png'" alt="avatar_img" class="img-fluid img-thumbnail">
+      <div><label>{{attendee.person.first_name}}</label></div>
+    </div>
+  </div>
+</div>
